@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Quiz logo.jpg" width="50" height="50" alt="Logo">
+            <div class="logo">Quiz Game</div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="product.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Quiz Game</h1>
+            <p>Test your knowledge and compete with friends!</p>
+            <button onclick="location.href='#quiz-container'">Start Now</button>
+        </section>
+        <div id="quiz-container">
+            <form id="quiz-form">
+                <label for="difficulty">Select Difficulty:</label>
+                <select id="difficulty" name="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button type="submit">Start Quiz</button>
+            </form>
+            <div id="question-container" class="hidden">
+                <h2 id="question"></h2>
+                <div id="answers"></div>
+                <p id="timer" class="timer"></p>
+            </div>
+            <div id="result" class="hidden">
+                <p id="result-message"></p>
+                <button id="next-question">Next Question</button>
+                <button id="reset-score">Reset Score</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
